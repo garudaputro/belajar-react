@@ -1,28 +1,23 @@
-
-import { IconBrandTwitter, IconBrandGithub, IconBrandFacebook } from '@tabler/icons';
+import PlaceContentCenter from './components/PlaceContentCenter';
 import Button from './components/Button';
-
-
+import { useState } from 'react';
 const App = () => {
+    const [count, setCount] = useState(0);
+    function handleClick() {
+        setCount((prevCount) => prevCount + 1);
+        console.log(count)
+    }
+   
     return (
-        <div className='bg-slate-900 grid place-content-center min-h-screen'>
-            <div className='flex gap-x-2'>
-                <Button onClick={() => console.log('github')} className='bg-slate-800'>
-                    <IconBrandGithub />
-                    github
+        <PlaceContentCenter>
+            <p className='text-2xl'>{count}</p>
+            <div className='mt-5 flex gap-x-2'>
+                <Button className='bg-green-500' onClick={handleClick}>
+                    +
                 </Button>
-
-                <Button onClick={() => console.log('twitter')} className='bg-blue-500 shadow-lg' type="submit">
-                    <IconBrandTwitter />
-                    twitter
-                </Button>
-                <Button onClick={() => console.log('facebook')} className='bg-blue-800 shadow-lg ' type="submit">
-                    <IconBrandFacebook />
-                    facebook
-                </Button>
-
+              
             </div>
-        </div>
+        </PlaceContentCenter>
     );
 };
 
