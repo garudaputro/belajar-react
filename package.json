@@ -11,13 +11,16 @@
     },
     "dependencies": {
         "@heroicons/react": "^2.0.12",
+        "@splidejs/react-splide": "^0.7.12",
         "@tabler/icons": "^1.102.0",
         "clsx": "^1.2.1",
         "daisyui": "^2.31.0",
+        "framer-motion": "^7.6.9",
         "node-sass": "^7.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.4.2",
+        "react-icons": "^4.6.0",
+        "react-router-dom": "^6.4.3",
         "yarn": "^1.22.19"
     },
     "devDependencies": {
